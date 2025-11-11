@@ -1,0 +1,144 @@
+:root {
+  --bg: #f7f9fc;
+  --card: #fff;
+  --muted: #666;
+  --accent: #0366d6;
+  --maxw: 1000px;
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  background: var(--bg);
+  color: #111;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding: 1.5rem;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 1px solid #e3e7ec;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.cover {
+  width: 240px;
+  height: 320px;
+  background: linear-gradient(135deg, #eef6ff, #fff);
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(20, 30, 40, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9aa6b2;
+  font-size: 0.75rem;
+  text-align: center;
+  flex: 0 0 96px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+nav {
+  margin-top: 0.75rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: start;
+}
+
+main {
+  min-width: 0;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 0.98rem;
+}
+
+ul,
+ol {
+  margin-top: 0.35rem;
+  padding-left: 1.1rem;
+}
+
+aside .card {
+  position: sticky;
+  top: 1.25rem;
+}
+
+nav {
+  margin-top: 1rem;
+  border-radius: 10px;
+
+  .toc li {
+    margin-bottom: 0.45rem;
+  }
+
+  box-shadow: 0 1px 6px rgba(20, 30, 40, 0.05);
+
+  .meta-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 1.25rem;
+  }
+
+  @media (max-width: 880px) {
+    .grid {
+      grid-template-columns: 240px;
+    }
+
+    .cover {
+      display: none;
+    }
+
+    aside .card {
+      position: static;
+    }
+  }
+}
