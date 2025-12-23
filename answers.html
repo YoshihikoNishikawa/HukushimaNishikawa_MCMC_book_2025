@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>回答集 | マルコフ連鎖モンテカルロ法入門</title>
+    <meta name="description" content="質問/回答集。" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [["\\(", "\\)"], ["$", "$"]],
+            displayMath: [["\\[", "\\]"], ["$$", "$$"]]
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js" defer></script>
+
+
+<body>
+    <div class="wrap">
+        <header>
+            <div>
+                <p class="back-link"><a href="index.html">← トップページへ戻る</a></p>
+                <h1>回答集</h1>
+                <p class="meta">読者の方からの質問と回答を紹介します。質問は<a href="https://forms.gle/yqdw5QEzTmdK1X3v8">質問箱</a>からどうぞ。</p>
+            </div>
+        </header>
+
+        <main>
+            <section aria-labelledby="qa-latest">
+                <!-- <h2 id="qa-latest">最近の質問</h2> -->
+                <ul class="qa-list">
+                    <li>
+                        <details class="qa-item">
+                            <summary>
+                                第1章図1.2の再重率分布とはどのようにして計算したのでしょうか。本文p21で（2.2節で詳しく説明する）とありましたが、2.2節を読んでも計算方法がよくわかりませんでした。
+                            </summary>
+                            <div class="qa-body">
+                                <p>
+                                    2.2節での$Q$に対応する分布は図1.2では一様分布で、一方の「偏った分布」というのが式(1.2)です。すると、式(2.21)に出てくる重みは単に式(1.3)の分布を定数で割ったものになります。このとき分布$Q$の下でのサンプル列を
+                                    $\{\hat {\mu}^{(m)}_M\}_m$と書くと、$P$の下での$\hat
+                                    \mu_M$の分布$P_M(\hat \mu_M)$は、式(2.23)での関数$h$を$\delta(\hat
+                                    \mu_M, \hat \mu^{(m)}_M)$とすることで評価できて、具体的には以下のようになります。
+                                    \[
+                                    P_M(\hat \mu_M) \sim \sum_{m} \delta(\hat \mu_M, \hat \mu^{(m)}_M) \frac{P(\hat
+                                    \mu^{(m)}_M)}{Q(\hat \mu^{(m)}_M)}
+                                    \sim \sum_{m} \delta(\hat \mu_M, \hat \mu^{(m)}_M) P(\hat
+                                    \mu^{(m)}_M)
+                                    \sim \sum_{m} \delta(\hat\mu_M, \hat \mu^{(m)}_M) \exp(h \hat \mu^{(m)}_M)
+                                    \]
+                                    ここで$Q$の下での$\hat \mu_M$の分布を$P_M^{(Q)}(\hat \mu_M)$とおくと、今の場合
+                                    \[
+                                    P_M(\hat \mu_M) \sim \sum_{m} \delta(\hat \mu_M, \hat \mu^{(m)}_M) \exp(h \hat
+                                    \mu_M)
+                                    = P_M^{(Q)}(\hat \mu_M)\exp(h \hat \mu_M)
+                                    \]
+                                    と書けて、結局$P_M(\hat \mu_M)$は単に$P_M^{(Q)}(\hat \mu_M)$に重み$\exp(h \hat
+                                    \mu^{(m)}_M)$をかけたものになります。
+                                </p>
+                                <p class="qa-meta">更新日: 2025/12/18</p>
+                            </div>
+                        </details>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
