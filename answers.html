@@ -54,14 +54,16 @@
                                     \mu^{(m)}_M)
                                     \sim \sum_{m} \delta(\hat\mu_M, \hat \mu^{(m)}_M) \exp(h \hat \mu^{(m)}_M)
                                     \]
-                                    ここで$Q$の下での$\hat \mu_M$の分布を$P_M^{(Q)}(\hat \mu_M)$とおくと、今の場合
+                                    これで再重率分布の計算ができますが、
+                                    ここで$Q$の下での$\hat \mu_M$の分布を$P_M^{(Q)}(\hat \mu_M)$ (図1.2での「単純サンプリング」に対応しています)
+                                    とおくと、今の場合
                                     \[
                                     P_M(\hat \mu_M) \sim \sum_{m} \delta(\hat \mu_M, \hat \mu^{(m)}_M) \exp(h \hat
                                     \mu_M)
                                     = P_M^{(Q)}(\hat \mu_M)\exp(h \hat \mu_M)
                                     \]
-                                    と書けて、結局$P_M(\hat \mu_M)$は単に$P_M^{(Q)}(\hat \mu_M)$に重み$\exp(h \hat
-                                    \mu^{(m)}_M)$をかけたものになります。
+                                    と書けて、すでに$P_M^{(Q)}(\hat \mu_M)$を持っているなら、それに重み$\exp(h \hat
+                                    \mu^{(m)}_M)$をかければ(さらに積分値が1になるように規格化すれば)良いということになります。
                                 </p>
                                 <p class="qa-meta">更新日: 2025/12/23</p>
                             </div>

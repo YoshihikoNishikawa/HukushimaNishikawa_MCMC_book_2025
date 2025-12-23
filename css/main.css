@@ -190,11 +190,9 @@ code {
 }
 
 .qa-item summary {
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 600;
   outline: none;
-  list-style: none;
-  display: flex;
   gap: 0.5rem;
   align-items: flex-start;
 }
@@ -206,16 +204,14 @@ code {
 }
 
 .qa-item summary::-webkit-details-marker {
-  display: none;
+  display: initial;
 }
 
 .qa-item summary::before {
-  /* content: "▶"; */
+  cursor: pointer;
   font-size: 0.8rem;
   color: var(--muted);
-  /* transform: rotate(-90deg); */
   transition: transform 160ms ease;
-  /* margin-top: 0.5rem; */
   line-height: 1;
 }
 
